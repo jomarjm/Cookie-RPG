@@ -22,11 +22,11 @@ html {
 
 /* Title Screen */
 
-/* 
+
 #title-screen {
     animation: title-screen-fade 3s ease-in-out 3s both; 
 }
-*/
+
 
 #title-screen h1 {
     font-family: "Major Mono Display", monospace;
@@ -49,19 +49,20 @@ html {
     background-color: white;
     padding: 5px;
     font-size: 2.0rem;
-    transition: all 100ms ease-in-out; /* no transitions for mobile */
+    /* transition: all 100ms ease-in-out; */ /* no transitions for mobile */
 }
 
 #title-screen button:hover {
     color: white;
     background-color: black;
-    transform: scale(1.3);
-    transition: all 200ms ease-in-out; 
+    /* transform: scale(1.3);
+    transition: all 200ms ease-in-out; */
 }
 
 
-/* The game style */
+/* The game styles */
 
+/* game container */
 #game-container {
     display: none;
 }
@@ -69,6 +70,11 @@ html {
 .img-container {
     display: none;
     width: 50px;
+}
+
+/* in game text */
+p {
+    font-size: 1.4rem;
 }
 
 /* animations */

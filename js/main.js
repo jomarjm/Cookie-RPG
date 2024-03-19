@@ -19,7 +19,7 @@ function showStartGameButton() {
     startButton.style.display = "block";
 }
 
-setTimeout(showStartGameButton, 3000);
+setTimeout(showStartGameButton, 8000);
 
 // start game. hide title screen, show game.
 function startGame() {
