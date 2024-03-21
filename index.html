@@ -31,15 +31,24 @@
             </div>
 
             <div id="text-box">
-                <p id="text">Distribute your stat points: <span id="stat-points"></span></p>
-            </div>
-
-            <div id="button-container">
-                <div id="initial-stat-dist">
-                    <label for="attack">Attack</label>
-                    <input id="attack" type="number" min="0" max="10">
+                <div id="name-set-container">
+                    <label for="player-name">Name your character: <input id="player-name" type="text" required pattern="[a-z]{1-10}" min="1" max="10"></label>
+                    <button id="set-name">Set Name</button>
+                    <p id="text">Distribute your stat points: <span id="stat-points"></span></p>
+                </div>
+                <div id="button-container">
+                    <div id="initial-stat-dist">
+                        <label for="attack">Attack</label>
+                        <input id="attack" type="number" min="0" max="10" required disabled>
+                        <label for="defense">Defense</label>
+                        <input id="defense" type="number" min="0" max="10" required disabled>
+                        <label for="speed">Speed</label>
+                        <input id="speed" type="number" min="0" max="10" required disabled>
+                    </div>
                 </div>
             </div>
+
+            
                 
             <!-- <p>in progress. come back soon!</p> -->
         </div>

@@ -41,7 +41,7 @@ html {
     font-size: 2.4rem;
 }
 
-#title-screen button {
+#title-screen button, #text-box button {
     border: 2px solid black;
     padding: 3px;
     border-radius: 5px;
@@ -54,7 +54,7 @@ html {
     /* transition: all 100ms ease-in-out; */ /* no transitions for mobile */
 }
 
-#title-screen button:hover {
+#title-screen button:hover, #text-box button:hover {
     color: white;
     background-color: black;
     /* transform: scale(1.3);
@@ -117,4 +117,51 @@ img {
 
 #enemy-img-container {
     display: none;
+}
+
+/* text box */
+#text-box {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+#text-box button {
+    display: block;
+    margin: 5px auto;
+    font-size: 1.4rem;
+    border-width: 1px;
+}
+
+/* stat points */
+label[for="player-name"] {
+    font-size: 1.4rem;
+    display: inline;
+}
+
+label[for="player-name"] input {
+    width: 30%;
+    display: inline;
+}
+
+#initial-stat-dist {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: justify;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 15px auto;
+    padding: 20px;
+    align-items: center;
+    justify-items: center;
+    row-gap: 2px;
+}
+
+#initial-stat-dist label {
+    font-size: 1.1rem;
+}
+
+#initial-stat-dist input {
+    width: 50%;
 }

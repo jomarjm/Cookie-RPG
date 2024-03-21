@@ -7,7 +7,7 @@ const startButton = document.querySelector("#start-button");
 const titleScreen = document.querySelector("#title-screen");
 const gameContainer = document.querySelector("#game-container");
 const imageSection = document.querySelector("#img-section");
-const statPointsText = document.querySelector("stat-points");
+const statPointsText = document.querySelector("#stat-points");
 
 // with getElementById
 const playerImg = document.getElementById("player-img");
@@ -36,7 +36,15 @@ function startGame() {
         gameContainer.style.display = "block";
         console.log("You have started the game!");
     }
+    resetStatPoints();
     // then reset everything
     // set stats
 }
 
+// reset Stat points
+function resetStatPoints() {
+    statPoints = 10;
+    statPointsText.innerText = statPoints;
+}
+
+// check input validity
