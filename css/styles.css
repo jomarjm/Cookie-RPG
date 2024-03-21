@@ -12,7 +12,7 @@ html {
 /* Title Screen and Game Container */
 
 #title-screen, #game-container{
-    width: 400px;
+    width: 380px;
     border: 1px solid black;
     border-radius: 15px;
     margin: 20px auto;
@@ -22,10 +22,11 @@ html {
 
 /* Title Screen */
 
-
+/*
 #title-screen {
     animation: title-screen-fade 3s ease-in-out 3s both; 
 }
+*/
 
 
 #title-screen h1 {
@@ -47,6 +48,7 @@ html {
     display: none;
     margin: 20px auto 0;
     background-color: white;
+    color: black;
     padding: 5px;
     font-size: 2.0rem;
     /* transition: all 100ms ease-in-out; */ /* no transitions for mobile */
@@ -67,10 +69,7 @@ html {
     display: none;
 }
 
-.img-container {
-    display: none;
-    width: 50px;
-}
+
 
 /* in game text */
 p {
@@ -90,4 +89,32 @@ p {
 }
 
 /* images */
+#img-section {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.img-container {
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+}
+
+img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#enemy-img-container {
+    display: none;
+}

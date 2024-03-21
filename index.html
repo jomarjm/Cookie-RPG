@@ -11,15 +11,37 @@
         <script src="js/main.js" defer></script>
     </head>
     <body>
+
         <div id="title-screen">
             <h1>cookie</h1>
             <h2>the rpg</h2>
             <button type="button" id="start-button">Start Game</button>
         </div>
+
+        <!-- The Game -->
         <div id="game-container">
-            <div class="img-container" id="player-img"></div>
-            <div class="img-container" id="enemy-img"></div>
-            <p>in progress. come back soon!</p>
+            <!-- Character image display -->
+            <div id="img-section">
+                <div class="img-container" id="player-img-container">
+                    <img id="player-img" src="img/you.png">
+                </div>
+                <div class="img-container" id="enemy-img-container">
+                    <img id="enemy-img">
+                </div>
+            </div>
+
+            <div id="text-box">
+                <p id="text">Distribute your stat points: <span id="stat-points"></span></p>
+            </div>
+
+            <div id="button-container">
+                <div id="initial-stat-dist">
+                    <label for="attack">Attack</label>
+                    <input id="attack" type="number" min="0" max="10">
+                </div>
+            </div>
+                
+            <!-- <p>in progress. come back soon!</p> -->
         </div>
     </body>
 </html>

@@ -1,9 +1,13 @@
 // initialize variables
 
+let statPoints = 10;
+
 // with querySelector
 const startButton = document.querySelector("#start-button");
 const titleScreen = document.querySelector("#title-screen");
 const gameContainer = document.querySelector("#game-container");
+const imageSection = document.querySelector("#img-section");
+const statPointsText = document.querySelector("stat-points");
 
 // with getElementById
 const playerImg = document.getElementById("player-img");
@@ -19,7 +23,7 @@ function showStartGameButton() {
     startButton.style.display = "block";
 }
 
-setTimeout(showStartGameButton, 8000);
+setTimeout(showStartGameButton, 1000);
 
 // start game. hide title screen, show game.
 function startGame() {
