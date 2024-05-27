@@ -11,46 +11,54 @@
         <script src="js/main.js" defer></script>
     </head>
     <body>
-
-        <div id="title-screen">
-            <h1>cookie</h1>
-            <h2>the rpg</h2>
-            <button type="button" id="start-button">Start Game</button>
-        </div>
-
-        <!-- The Game -->
-        <div id="game-container">
-            <!-- Character image display -->
-            <div id="img-section">
-                <div class="img-container" id="player-img-container">
-                    <img id="player-img" src="img/you.png">
-                </div>
-                <div class="img-container" id="enemy-img-container">
-                    <img id="enemy-img">
-                </div>
-            </div>
-
-            <div id="text-box">
-                <div id="name-set-container">
-                    <label for="player-name">Name your character: <input id="player-name" type="text" required pattern="[a-z]{1-10}" min="1" max="10"></label>
-                    <button id="set-name">Set Name</button>
-                    <p id="text">Distribute your stat points: <span id="stat-points"></span></p>
-                </div>
-                <div id="button-container">
-                    <div id="initial-stat-dist">
-                        <label for="attack">Attack</label>
-                        <input id="attack" type="number" min="0" max="10" required disabled>
-                        <label for="defense">Defense</label>
-                        <input id="defense" type="number" min="0" max="10" required disabled>
-                        <label for="speed">Speed</label>
-                        <input id="speed" type="number" min="0" max="10" required disabled>
+        <header id="title-header">
+            <h1>Cookie</h1>
+            <p>the game<p>
+            <button id="start-game-btn">Start Game</button>
+        </header>
+        <main>
+            <div id="intro-name-stats">
+                <div id="name-set">
+                    <div id="name-set-input">
+                        <label for="name">Please enter your name: </label>
+                        <input id="name" type="text" required minlength="1" maxlength="10">
                     </div>
+                    <button id="set-name-btn">Set Name</button>
+                    <p id="name-output"></p>
+                </div>
+                <div id="stat-set">
+                    <p>Distribute your Stat Points</p>
+                    <p>Stat Points available: <span class="bold" id="initial-stat-points">10</span></p>
+                    <div id="attack-set-input">
+                        <label for="attack">Attack: </label>
+                        <input id="attack" type="number" max="10" disabled>
+                    </div>
+                    <div id="defense-set-input">
+                        <label for="defense">Defense: </label>
+                        <input id="defense" type="number" max="10" disabled>
+                    </div>
+                    <div id="speed-set-input">
+                        <label for="speed">Speed: </label>
+                        <input id="speed" type="number" max="10" disabled>
+                    </div>
+                    <div >
+                        <button id="intro-back-btn">Back</button>
+                        <button id="set-stats-btn">Set Stats</button>
+                    </div>
+                    
                 </div>
             </div>
-
-            
-                
-            <!-- <p>in progress. come back soon!</p> -->
-        </div>
+            <div id="game-container">
+                <div id="img-gallery">
+                    <img src="./img/cookie.png">
+                </div>
+                <div id="text-box"></div>
+                <div id="btn-container">
+                    <button id="btn-1"></button>
+                    <button id="btn-2"></button>
+                    <button id="btn-3"></button>
+                </div>
+            </div>
+        </main>
     </body>
 </html>

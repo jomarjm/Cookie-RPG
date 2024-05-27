@@ -7,161 +7,179 @@
 
 html {
     font-size: 10px;
+    height: 100%;
 }
 
-/* Title Screen and Game Container */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    border-color: red;
+}
 
-#title-screen, #game-container{
-    width: 380px;
-    border: 1px solid black;
-    border-radius: 15px;
-    margin: 20px auto;
-    padding: 30px;
+header {
     text-align: center;
-}
-
-/* Title Screen */
-
-/*
-#title-screen {
-    animation: title-screen-fade 3s ease-in-out 3s both; 
-}
-*/
-
-
-#title-screen h1 {
-    font-family: "Major Mono Display", monospace;
-    margin-bottom: 8px;
-    font-size: 3.6rem;
-    font-weight: 700;
-}
-
-#title-screen h2 {
-    font-family: "Victor Mono", monospace;
-    font-size: 2.4rem;
-}
-
-#title-screen button, #text-box button {
-    border: 2px solid black;
-    padding: 3px;
+    width: 80%;
+    height: 20%;
+    border: 1px solid black;
     border-radius: 5px;
-    display: none;
-    margin: 20px auto 0;
-    background-color: white;
-    color: black;
-    padding: 5px;
-    font-size: 2.0rem;
-    /* transition: all 100ms ease-in-out; */ /* no transitions for mobile */
-}
-
-#title-screen button:hover, #text-box button:hover {
-    color: white;
-    background-color: black;
-    /* transform: scale(1.3);
-    transition: all 200ms ease-in-out; */
-}
-
-
-/* The game styles */
-
-/* game container */
-#game-container {
-    display: none;
-}
-
-
-
-/* in game text */
-p {
-    font-size: 1.4rem;
-}
-
-/* animations */
-
-@keyframes title-screen-fade {
-    0% {
-        opacity: 0%;
-    }   
-
-    100% {
-        opacity: 100%;
-    }
-}
-
-/* images */
-#img-section {
-    width: 90%;
-    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
-.img-container {
-    width: 120px;
-    height: 120px;
+header h1 {
+    font-size: 3.6rem;
+}
+
+header h2 {
+    font-size: 3.0rem;
+}
+
+header p {
+    font-size: 2.0rem;
+}
+
+header button {
+    width: 40%;
+    height: 25px;
+}
+
+button {
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    width: 40%;
+    height: 20px;
+    margin: 5px auto;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* main */
+/*
+main > div {
     border: 1px solid black;
-    border-radius: 15px;
-    padding: 15px;
-    margin: 10px;
+
+}
+*/
+
+main {
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%;
 }
 
-img {
-    object-fit: fill;
-    width: 100%;
-    height: 100%;
-    margin: auto;
+/* intro stats and name section */
+
+/*
+#name-set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
-#enemy-img-container {
+#name-set-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#name-set input {
+    width: 35%;
+}
+
+#set-name-btn {
+    width: 30%;
+    height: 20px;
+}
+*/
+main > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+main > div > div > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+main > div > div > div > input {
+    width: 8rem;
+}
+
+main > div > div > button {
+    margin-bottom: 18px;
+}
+
+#intro-back-btn {
     display: none;
 }
 
-/* text box */
-#text-box {
-    width: 90%;
-    text-align: center;
-    margin: auto;
+#set-stats-btn {
+    display: none;
 }
 
-#text-box button {
-    display: block;
-    margin: 5px auto;
-    font-size: 1.4rem;
-    border-width: 1px;
+.bold {
+    font-weight: 700;
 }
 
-/* stat points */
-label[for="player-name"] {
-    font-size: 1.4rem;
-    display: inline;
+#name-output {
+    display: none;
 }
 
-label[for="player-name"] input {
-    width: 30%;
-    display: inline;
+#img-gallery {
+    display: flex;
+    flex-direction: row;
 }
 
-#initial-stat-dist {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: justify;
-    width: 200px;
-    border: 1px solid black;
-    border-radius: 15px;
-    margin: 15px auto;
-    padding: 20px;
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#game-container {
+    width: 100%;
+    border: red 1px solid;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
-    row-gap: 2px;
 }
 
-#initial-stat-dist label {
-    font-size: 1.1rem;
+#text-box {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    display: block;
 }
 
-#initial-stat-dist input {
-    width: 50%;
+#btn-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#btn-container button {
+    width: 30%;
+}
+
+main {
+    display: none;
 }
