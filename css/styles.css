@@ -121,7 +121,7 @@ main > div > div > div {
 }
 
 main > div > div > div > input {
-    width: 8rem;
+    width: 45%;
 }
 
 main > div > div > button {
@@ -156,7 +156,7 @@ img {
 
 #game-container {
     width: 100%;
-    border: red 1px solid;
+    /* border: red 1px solid; */
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -165,19 +165,24 @@ img {
 
 #text-box {
     width: 100%;
-    text-align: center;
+    height: min-content;
+    text-align: justify;
     border: 1px solid black;
     display: block;
+    padding: 5px;
+    border-radius: 2px;
 }
 
 #btn-container {
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 #btn-container button {
     width: 30%;
+    height: max-content;
 }
 
 main {
